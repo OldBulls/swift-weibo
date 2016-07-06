@@ -467,6 +467,8 @@
 				INFOPLIST_FILE = ZNWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhenniukeji.ZNWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -481,6 +483,7 @@
 				INFOPLIST_FILE = ZNWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhenniukeji.ZNWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

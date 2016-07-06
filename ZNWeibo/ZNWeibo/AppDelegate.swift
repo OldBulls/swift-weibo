@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import QorumLogs
+import QorumLogs //第三方打印log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,13 +18,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        QorumLogs.enabled = true
-        QorumLogs.test()
+//        QorumLogs.enabled = true
+//        QorumLogs.test()
+        
+        ZNLog("你好")
         
         return true
     }
 
-
-
 }
+
+//MARK: - 自定义全局Log 
+
+func ZNLog<T>(message:T, fileName:String = #file, funcName:String = #function, lineNum:Int = #line) {
+    
+    #if DEBUG
+        
+        //添加flat标签步骤:点击项目-->Build Setting-->swfit flag-->点击箭头-->点击Debug添加--> -D DEBUG
+        
+        //lastPathComponent 获取字符串最后一个 "/"后面的字符串
+        var file = (fileName as NSString).lastPathComponent as NSString
+        let index = file.rangeOfString(".")
+        file = file.substringToIndex(index.location)
+        
+        print("\(file):\(funcName)(\(lineNum)行)-\(message)")
+        
+    #endif
+    
+}
+
+
+
+
 
