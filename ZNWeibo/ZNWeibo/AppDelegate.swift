@@ -21,7 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        QorumLogs.enabled = true
 //        QorumLogs.test()
         
-        ZNLog("你好")
+        //设置全局颜色
+        UITabBar.appearance().tintColor = UIColor.orangeColor()
+        
+        //创建window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = MainViewController()
+        window?.makeKeyAndVisible()
         
         return true
     }
@@ -29,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 //MARK: - 自定义全局Log 
-
 func ZNLog<T>(message:T, fileName:String = #file, funcName:String = #function, lineNum:Int = #line) {
     
     #if DEBUG
