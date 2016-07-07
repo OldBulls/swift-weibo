@@ -1,2 +1,2 @@
 # swift-weibo
- 学习siwft练手demo
+ 学习swift练手demo
