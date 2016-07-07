@@ -13,7 +13,12 @@
 		910A69501D2D5D6F0010ACD9 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A694F1D2D5D6F0010ACD9 /* MessageViewController.swift */; };
 		910A69521D2D5D770010ACD9 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A69511D2D5D770010ACD9 /* DiscoverViewController.swift */; };
 		910A69541D2D5D7E0010ACD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A69531D2D5D7E0010ACD9 /* ProfileViewController.swift */; };
-		910A69561D2D69FC0010ACD9 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 910A69551D2D69FC0010ACD9 /* MainVCSettings.json */; };
+		9199155E1D2E9589002F1A13 /* ZNTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9199155D1D2E9589002F1A13 /* ZNTabBar.swift */; };
+		919915671D2EC3D2002F1A13 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 919915661D2EC3D2002F1A13 /* MainVCSettings.json */; };
+		9199156A1D2EC44D002F1A13 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919915691D2EC44D002F1A13 /* BaseViewController.swift */; };
+		9199156E1D2EC4A7002F1A13 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9199156D1D2EC4A7002F1A13 /* UIButton-Extension.swift */; };
+		919915721D2EC53E002F1A13 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919915711D2EC53E002F1A13 /* VisitorView.swift */; };
+		919915741D2EC54F002F1A13 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919915731D2EC54F002F1A13 /* VisitorView.xib */; };
 		91991A1A1D2D3B0300D2E9FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91991A191D2D3B0300D2E9FD /* AppDelegate.swift */; };
 		91991A1F1D2D3B0300D2E9FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91991A1D1D2D3B0300D2E9FD /* Main.storyboard */; };
 		91991A211D2D3B0300D2E9FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91991A201D2D3B0300D2E9FD /* Assets.xcassets */; };
@@ -46,7 +51,12 @@
 		910A694F1D2D5D6F0010ACD9 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		910A69511D2D5D770010ACD9 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		910A69531D2D5D7E0010ACD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		910A69551D2D69FC0010ACD9 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		9199155D1D2E9589002F1A13 /* ZNTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZNTabBar.swift; sourceTree = "<group>"; };
+		919915661D2EC3D2002F1A13 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		919915691D2EC44D002F1A13 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9199156D1D2EC4A7002F1A13 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
+		919915711D2EC53E002F1A13 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		919915731D2EC54F002F1A13 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		91991A161D2D3B0300D2E9FD /* ZNWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZNWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91991A191D2D3B0300D2E9FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91991A1E1D2D3B0300D2E9FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +114,7 @@
 				910A69491D2D5BA90010ACD9 /* Message */,
 				910A69461D2D5BA90010ACD9 /* Discover */,
 				910A694A1D2D5BA90010ACD9 /* Profile */,
+				9199156B1D2EC4A7002F1A13 /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -127,8 +138,10 @@
 		910A69481D2D5BA90010ACD9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				910A69551D2D69FC0010ACD9 /* MainVCSettings.json */,
+				919915651D2EC3D2002F1A13 /* Resource */,
+				919915681D2EC422002F1A13 /* Visitor */,
 				910A694B1D2D5D210010ACD9 /* MainViewController.swift */,
+				9199155D1D2E9589002F1A13 /* ZNTabBar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -147,6 +160,40 @@
 				910A69531D2D5D7E0010ACD9 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		919915651D2EC3D2002F1A13 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				919915661D2EC3D2002F1A13 /* MainVCSettings.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		919915681D2EC422002F1A13 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				919915691D2EC44D002F1A13 /* BaseViewController.swift */,
+				919915711D2EC53E002F1A13 /* VisitorView.swift */,
+				919915731D2EC54F002F1A13 /* VisitorView.xib */,
+			);
+			path = Visitor;
+			sourceTree = "<group>";
+		};
+		9199156B1D2EC4A7002F1A13 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9199156C1D2EC4A7002F1A13 /* Category */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		9199156C1D2EC4A7002F1A13 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9199156D1D2EC4A7002F1A13 /* UIButton-Extension.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		91991A0D1D2D3B0300D2E9FD = {
@@ -317,8 +364,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				91991A211D2D3B0300D2E9FD /* Assets.xcassets in Resources */,
+				919915741D2EC54F002F1A13 /* VisitorView.xib in Resources */,
 				91991A1F1D2D3B0300D2E9FD /* Main.storyboard in Resources */,
-				910A69561D2D69FC0010ACD9 /* MainVCSettings.json in Resources */,
+				919915671D2EC3D2002F1A13 /* MainVCSettings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,11 +440,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				910A69541D2D5D7E0010ACD9 /* ProfileViewController.swift in Sources */,
+				9199156E1D2EC4A7002F1A13 /* UIButton-Extension.swift in Sources */,
 				910A694E1D2D5D630010ACD9 /* HomeViewController.swift in Sources */,
 				91991A1A1D2D3B0300D2E9FD /* AppDelegate.swift in Sources */,
+				9199155E1D2E9589002F1A13 /* ZNTabBar.swift in Sources */,
 				910A69501D2D5D6F0010ACD9 /* MessageViewController.swift in Sources */,
+				9199156A1D2EC44D002F1A13 /* BaseViewController.swift in Sources */,
 				910A69521D2D5D770010ACD9 /* DiscoverViewController.swift in Sources */,
 				910A694C1D2D5D210010ACD9 /* MainViewController.swift in Sources */,
+				919915721D2EC53E002F1A13 /* VisitorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,13 +13,35 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
   
+        //创建控制器
+        creatChildVc()
+        
+        //自定义tabBar
+        setTabBar()
+        
+        //监听重复点击tabBar按钮的通知
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainViewController.tabBarButtonDidRepeatClick), name: "ZNTabBarButtonDidRepeatClickNotification", object: nil)
+        
+    }
+    
+    //代替了 dealloc
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+}
+
+extension MainViewController {
+    
+    
+    private func creatChildVc() {
         
         //创建子控制器
         //方法1
-//        addChildViewController(HomeTableViewController(), title: "首页", imageName: "")
-//        addChildViewController(MessageTableViewController(), title: "消息", imageName: "")
-//        addChildViewController("DiscoverTableViewController", title: "发现", imageName: "")
-//        addChildViewController("ProfileTableViewController", title: "我", imageName: "")
+        //        addChildViewController(HomeTableViewController(), title: "首页", imageName: "")
+        //        addChildViewController(MessageTableViewController(), title: "消息", imageName: "")
+        //        addChildViewController("DiscoverTableViewController", title: "发现", imageName: "")
+        //        addChildViewController("ProfileTableViewController", title: "我", imageName: "")
         
         //方法二 通过json动态创建控制器
         //1.获取json路径
@@ -59,10 +81,8 @@ class MainViewController: UITabBarController {
             
             addChildViewController(vcName, title: title, imageName: imageName)
         }
-        
-        
     }
-
+    
     //方法重载:方法名相同,参数不同
     //private 只有当前文件能访问,其他文件不能访问
     /** 添加子控制器 */
@@ -80,6 +100,9 @@ class MainViewController: UITabBarController {
         addChildViewController(childNav)
     }
     
+    
+    
+    
     /** 通过类名创建添加子控制器 */
     private func addChildViewController(childVcName: String, title: String, imageName: String) {
         
@@ -92,7 +115,7 @@ class MainViewController: UITabBarController {
         //1.获取对应Class
         
         guard let childVcClass = NSClassFromString(nameSpace + "." + childVcName) else {
-            ZNLog("没有获取到字符串对应的Class")   
+            ZNLog("没有获取到字符串对应的Class")
             return
         }
         
@@ -114,5 +137,28 @@ class MainViewController: UITabBarController {
         
         //添加子控制器
         addChildViewController(childNav)
+    }
+    
+}
+
+extension MainViewController {
+    
+    private func setTabBar() {
+        //自定义tabBar
+        let tabBar = ZNTabBar()
+        setValue(tabBar, forKey: "tabBar")
+    }
+    
+}
+
+extension MainViewController {
+    
+    @objc private func tabBarButtonDidRepeatClick() {
+        
+        if view.window == nil {
+            return
+        }
+        
+        ZNLog(#function)
     }
 }
