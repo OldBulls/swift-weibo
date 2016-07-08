@@ -12,27 +12,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="tZv-uE-kME" userLabel="转盘">
-                    <rect key="frame" x="213" y="128" width="175" height="175"/>
+                    <rect key="frame" x="213" y="133" width="175" height="175"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="175" id="aAc-Hp-VjW"/>
                         <constraint firstAttribute="width" constant="175" id="nGW-Pi-juT"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_mask_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="fXO-6W-zMA" userLabel="背景">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="368"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="450" id="GDK-wq-nY3"/>
+                        <constraint firstAttribute="height" constant="368" id="GDK-wq-nY3"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_house" translatesAutoresizingMaskIntoConstraints="NO" id="7Qj-zt-hb8" userLabel="图标">
-                    <rect key="frame" x="253" y="196" width="94" height="90"/>
+                    <rect key="frame" x="253" y="201" width="94" height="90"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="90" id="EpT-Oo-iPs"/>
                         <constraint firstAttribute="width" constant="94" id="KJ0-dj-2cl"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注一些人，回这里看看有什么惊喜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aD3-my-det">
-                    <rect key="frame" x="188" y="352" width="224" height="17"/>
+                    <rect key="frame" x="188" y="357" width="224" height="17"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="224" id="Zt1-Lo-0sX"/>
                     </constraints>
@@ -41,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ys-ac-H8R">
-                    <rect key="frame" x="188" y="407" width="90" height="32"/>
+                    <rect key="frame" x="188" y="412" width="90" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="der-Wk-QY4"/>
                         <constraint firstAttribute="width" constant="90" id="knm-1q-2YU"/>
@@ -52,7 +52,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RK6-Ab-fgw">
-                    <rect key="frame" x="322" y="407" width="90" height="32"/>
+                    <rect key="frame" x="322" y="412" width="90" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="5M2-GC-cQl"/>
                         <constraint firstAttribute="width" constant="90" id="ir2-Pf-bFZ"/>
@@ -65,10 +65,9 @@
             </subviews>
             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="fXO-6W-zMA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2QU-si-WqI"/>
                 <constraint firstItem="fXO-6W-zMA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="35h-Y2-anC"/>
                 <constraint firstItem="0ys-ac-H8R" firstAttribute="top" secondItem="aD3-my-det" secondAttribute="bottom" constant="38" id="FQw-wS-XJs"/>
-                <constraint firstItem="tZv-uE-kME" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-85" id="GO9-Uq-jRv"/>
+                <constraint firstItem="tZv-uE-kME" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-80" id="GO9-Uq-jRv"/>
                 <constraint firstItem="aD3-my-det" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KVz-qZ-u8N"/>
                 <constraint firstItem="RK6-Ab-fgw" firstAttribute="trailing" secondItem="aD3-my-det" secondAttribute="trailing" id="OHC-3u-04b"/>
                 <constraint firstItem="tZv-uE-kME" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pv2-GB-n1B"/>
@@ -80,6 +79,11 @@
                 <constraint firstItem="0ys-ac-H8R" firstAttribute="leading" secondItem="aD3-my-det" secondAttribute="leading" id="lo4-E7-c0r"/>
                 <constraint firstAttribute="trailing" secondItem="fXO-6W-zMA" secondAttribute="trailing" id="tMN-Dx-lOR"/>
             </constraints>
+            <connections>
+                <outlet property="iconView" destination="7Qj-zt-hb8" id="Al0-H1-ORF"/>
+                <outlet property="rotationView" destination="tZv-uE-kME" id="JkB-uW-NS4"/>
+                <outlet property="tipLabel" destination="aD3-my-det" id="EMG-ts-RJK"/>
+            </connections>
             <point key="canvasLocation" x="316" y="146"/>
         </view>
     </objects>
