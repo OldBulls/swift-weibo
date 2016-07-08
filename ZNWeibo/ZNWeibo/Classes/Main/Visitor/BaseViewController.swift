@@ -13,7 +13,7 @@ class BaseViewController: UITableViewController {
     // MARK: - 懒加载属性
     lazy var visitorView : VisitorView = VisitorView.visitorView()
     
-    var isLogin : Bool = false
+    var isLogin : Bool = true
     
     override func loadView() {
         isLogin ? super.loadView() : setupVisitorView()

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1881645075E9E7B2E8B85D5E /* Pods_ZNWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7064564121860517A8BD7ED0 /* Pods_ZNWeibo.framework */; };
+		9108DBD11D3009A400110C85 /* ZNPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9108DBD01D3009A400110C85 /* ZNPresentationController.swift */; };
+		9108DBD31D30104300110C85 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9108DBD21D30104300110C85 /* PopoverAnimator.swift */; };
 		910A694C1D2D5D210010ACD9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A694B1D2D5D210010ACD9 /* MainViewController.swift */; };
 		910A694E1D2D5D630010ACD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A694D1D2D5D630010ACD9 /* HomeViewController.swift */; };
 		910A69501D2D5D6F0010ACD9 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A694F1D2D5D6F0010ACD9 /* MessageViewController.swift */; };
@@ -24,6 +26,10 @@
 		91991A211D2D3B0300D2E9FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91991A201D2D3B0300D2E9FD /* Assets.xcassets */; };
 		91991A2F1D2D3B0300D2E9FD /* ZNWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91991A2E1D2D3B0300D2E9FD /* ZNWeiboTests.swift */; };
 		91991A3A1D2D3B0300D2E9FD /* ZNWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91991A391D2D3B0300D2E9FD /* ZNWeiboUITests.swift */; };
+		91C7B3101D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7B30F1D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift */; };
+		91C7B3121D2FFF2B0054AD77 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7B3111D2FFF2B0054AD77 /* TitleButton.swift */; };
+		91C7B3151D3004500054AD77 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7B3141D3004500054AD77 /* PopoverViewController.swift */; };
+		91C7B3171D30045C0054AD77 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91C7B3161D30045C0054AD77 /* PopoverViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,8 @@
 /* Begin PBXFileReference section */
 		4DF3664785323A256DE64B16 /* Pods-ZNWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZNWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZNWeibo/Pods-ZNWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 		7064564121860517A8BD7ED0 /* Pods_ZNWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZNWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9108DBD01D3009A400110C85 /* ZNPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZNPresentationController.swift; sourceTree = "<group>"; };
+		9108DBD21D30104300110C85 /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		910A694B1D2D5D210010ACD9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		910A694D1D2D5D630010ACD9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		910A694F1D2D5D6F0010ACD9 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +76,10 @@
 		91991A351D2D3B0300D2E9FD /* ZNWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZNWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91991A391D2D3B0300D2E9FD /* ZNWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZNWeiboUITests.swift; sourceTree = "<group>"; };
 		91991A3B1D2D3B0300D2E9FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C7B30F1D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		91C7B3111D2FFF2B0054AD77 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		91C7B3141D3004500054AD77 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		91C7B3161D30045C0054AD77 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		D29CFCDFCCAEC265826BFF91 /* Pods-ZNWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZNWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZNWeibo/Pods-ZNWeibo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +142,7 @@
 		910A69471D2D5BA90010ACD9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				91C7B3131D3003F10054AD77 /* UIPopover */,
 				910A694D1D2D5D630010ACD9 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -184,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				9199156C1D2EC4A7002F1A13 /* Category */,
+				91C7B3111D2FFF2B0054AD77 /* TitleButton.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -192,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				9199156D1D2EC4A7002F1A13 /* UIButton-Extension.swift */,
+				91C7B30F1D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -246,6 +261,18 @@
 				91991A3B1D2D3B0300D2E9FD /* Info.plist */,
 			);
 			path = ZNWeiboUITests;
+			sourceTree = "<group>";
+		};
+		91C7B3131D3003F10054AD77 /* UIPopover */ = {
+			isa = PBXGroup;
+			children = (
+				91C7B3141D3004500054AD77 /* PopoverViewController.swift */,
+				91C7B3161D30045C0054AD77 /* PopoverViewController.xib */,
+				9108DBD01D3009A400110C85 /* ZNPresentationController.swift */,
+				9108DBD21D30104300110C85 /* PopoverAnimator.swift */,
+			);
+			name = UIPopover;
+			path = UIPopver;
 			sourceTree = "<group>";
 		};
 		B79512B3A914A839CCA6450C /* Frameworks */ = {
@@ -367,6 +394,7 @@
 				919915741D2EC54F002F1A13 /* VisitorView.xib in Resources */,
 				91991A1F1D2D3B0300D2E9FD /* Main.storyboard in Resources */,
 				919915671D2EC3D2002F1A13 /* MainVCSettings.json in Resources */,
+				91C7B3171D30045C0054AD77 /* PopoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,15 +467,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9108DBD11D3009A400110C85 /* ZNPresentationController.swift in Sources */,
 				910A69541D2D5D7E0010ACD9 /* ProfileViewController.swift in Sources */,
 				9199156E1D2EC4A7002F1A13 /* UIButton-Extension.swift in Sources */,
+				91C7B3151D3004500054AD77 /* PopoverViewController.swift in Sources */,
+				91C7B3101D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift in Sources */,
 				910A694E1D2D5D630010ACD9 /* HomeViewController.swift in Sources */,
 				91991A1A1D2D3B0300D2E9FD /* AppDelegate.swift in Sources */,
 				9199155E1D2E9589002F1A13 /* ZNTabBar.swift in Sources */,
 				910A69501D2D5D6F0010ACD9 /* MessageViewController.swift in Sources */,
 				9199156A1D2EC44D002F1A13 /* BaseViewController.swift in Sources */,
+				9108DBD31D30104300110C85 /* PopoverAnimator.swift in Sources */,
 				910A69521D2D5D770010ACD9 /* DiscoverViewController.swift in Sources */,
 				910A694C1D2D5D210010ACD9 /* MainViewController.swift in Sources */,
+				91C7B3121D2FFF2B0054AD77 /* TitleButton.swift in Sources */,
 				919915721D2EC53E002F1A13 /* VisitorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
