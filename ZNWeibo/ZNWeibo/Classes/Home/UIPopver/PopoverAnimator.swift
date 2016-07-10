@@ -23,7 +23,6 @@ class PopoverAnimator: NSObject {
     }
 }
 
-
 // MARK:- 自定义转场代理的方法
 extension PopoverAnimator : UIViewControllerTransitioningDelegate {
     // 目的:改变弹出View的尺寸
@@ -56,7 +55,7 @@ extension PopoverAnimator : UIViewControllerTransitioningDelegate {
 extension PopoverAnimator : UIViewControllerAnimatedTransitioning {
     /// 动画执行的时间
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.5
+        return 0.3
     }
     
     /// 获取`转场的上下文`:可以通过转场上下文获取弹出的View和消失的View

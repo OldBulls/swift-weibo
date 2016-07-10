@@ -22,6 +22,8 @@ extension UIBarButtonItem {
      }
      */
     
+    
+    //便利构造方法
     convenience init(imageName : String) {
         
         let btn = UIButton()

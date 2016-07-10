@@ -25,6 +25,7 @@ class ZNPresentationController: UIPresentationController {
         
         // 2.添加蒙版
         setupCoverView()
+        
     }
     
 }
@@ -37,7 +38,7 @@ extension ZNPresentationController {
         containerView?.insertSubview(coverView, atIndex: 0)
         
         // 2.设置蒙版的属性
-        coverView.backgroundColor = UIColor(white: 0.8, alpha: 0.2)
+        coverView.backgroundColor = UIColor(white: 0.75, alpha: 0.4)
         coverView.frame = containerView!.bounds
         
         // 3.添加手势

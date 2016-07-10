@@ -18,7 +18,7 @@ class ZNTabBar: UITabBar {
         super.layoutSubviews()
         
         guard let count = items?.count else {
-            print("没有tabBar个数")
+            
             return
         }
         
@@ -33,7 +33,7 @@ class ZNTabBar: UITabBar {
             
             guard tabBarButton.isKindOfClass(NSClassFromString("UITabBarButton")!) else {
                 
-                ZNLog("不是TabBarButton")
+//                ZNLog("不是TabBarButton")
                 continue
             }
             
@@ -48,7 +48,7 @@ class ZNTabBar: UITabBar {
             
             x = CGFloat(i) * btnW
             tabBarButton.frame = CGRectMake(x, 0, btnW, btnH)
-            ZNLog(tabBarButton.frame)
+            
             i += 1
             
             (tabBarButton as! UIControl).addTarget(self, action: #selector(ZNTabBar.tabBarButtonClick(_:)), forControlEvents: .TouchUpInside)

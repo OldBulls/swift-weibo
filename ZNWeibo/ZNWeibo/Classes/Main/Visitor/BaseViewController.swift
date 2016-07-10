@@ -13,7 +13,7 @@ class BaseViewController: UITableViewController {
     // MARK: - 懒加载属性
     lazy var visitorView : VisitorView = VisitorView.visitorView()
     
-    var isLogin : Bool = true
+    var isLogin : Bool = false
     
     override func loadView() {
         isLogin ? super.loadView() : setupVisitorView()
@@ -53,6 +53,10 @@ extension BaseViewController {
     }
     
     @objc private func loginBtnClick() {
-        ZNLog("loginBtnClick")
+        let oauthVc = OAuthViewController()
+        
+        let oauthNav = UINavigationController(rootViewController: oauthVc)
+        
+        presentViewController(oauthNav, animated: true, completion: nil)
     }
 }

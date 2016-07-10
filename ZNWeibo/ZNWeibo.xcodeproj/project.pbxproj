@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1881645075E9E7B2E8B85D5E /* Pods_ZNWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7064564121860517A8BD7ED0 /* Pods_ZNWeibo.framework */; };
+		5C753BC71D30A6EB00000384 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C753BC61D30A6EB00000384 /* Common.swift */; };
+		5C8033F61D309C3000BEA75F /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8033F51D309C3000BEA75F /* NetworkTools.swift */; };
+		5C8033FA1D30A1E200BEA75F /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8033F81D30A1E200BEA75F /* OAuthViewController.swift */; };
+		5C8033FB1D30A1E200BEA75F /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8033F91D30A1E200BEA75F /* OAuthViewController.xib */; };
+		5CD964FD1D30C6A300AC6B57 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD964FC1D30C6A300AC6B57 /* UserAccount.swift */; };
 		9108DBD11D3009A400110C85 /* ZNPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9108DBD01D3009A400110C85 /* ZNPresentationController.swift */; };
 		9108DBD31D30104300110C85 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9108DBD21D30104300110C85 /* PopoverAnimator.swift */; };
 		910A694C1D2D5D210010ACD9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A694B1D2D5D210010ACD9 /* MainViewController.swift */; };
@@ -51,6 +56,11 @@
 
 /* Begin PBXFileReference section */
 		4DF3664785323A256DE64B16 /* Pods-ZNWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZNWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZNWeibo/Pods-ZNWeibo.debug.xcconfig"; sourceTree = "<group>"; };
+		5C753BC61D30A6EB00000384 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		5C8033F51D309C3000BEA75F /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		5C8033F81D30A1E200BEA75F /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		5C8033F91D30A1E200BEA75F /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
+		5CD964FC1D30C6A300AC6B57 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		7064564121860517A8BD7ED0 /* Pods_ZNWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZNWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9108DBD01D3009A400110C85 /* ZNPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZNPresentationController.swift; sourceTree = "<group>"; };
 		9108DBD21D30104300110C85 /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
@@ -118,6 +128,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5C8033F71D30A1B000BEA75F /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				5C8033F81D30A1E200BEA75F /* OAuthViewController.swift */,
+				5C8033F91D30A1E200BEA75F /* OAuthViewController.xib */,
+				5CD964FC1D30C6A300AC6B57 /* UserAccount.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		910A69451D2D5BA90010ACD9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +171,7 @@
 		910A69481D2D5BA90010ACD9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5C8033F71D30A1B000BEA75F /* OAuth */,
 				919915651D2EC3D2002F1A13 /* Resource */,
 				919915681D2EC422002F1A13 /* Visitor */,
 				910A694B1D2D5D210010ACD9 /* MainViewController.swift */,
@@ -198,6 +219,8 @@
 			children = (
 				9199156C1D2EC4A7002F1A13 /* Category */,
 				91C7B3111D2FFF2B0054AD77 /* TitleButton.swift */,
+				5C8033F51D309C3000BEA75F /* NetworkTools.swift */,
+				5C753BC61D30A6EB00000384 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -394,6 +417,7 @@
 				919915741D2EC54F002F1A13 /* VisitorView.xib in Resources */,
 				91991A1F1D2D3B0300D2E9FD /* Main.storyboard in Resources */,
 				919915671D2EC3D2002F1A13 /* MainVCSettings.json in Resources */,
+				5C8033FB1D30A1E200BEA75F /* OAuthViewController.xib in Resources */,
 				91C7B3171D30045C0054AD77 /* PopoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,11 +494,15 @@
 				9108DBD11D3009A400110C85 /* ZNPresentationController.swift in Sources */,
 				910A69541D2D5D7E0010ACD9 /* ProfileViewController.swift in Sources */,
 				9199156E1D2EC4A7002F1A13 /* UIButton-Extension.swift in Sources */,
+				5C8033FA1D30A1E200BEA75F /* OAuthViewController.swift in Sources */,
+				5C753BC71D30A6EB00000384 /* Common.swift in Sources */,
+				5CD964FD1D30C6A300AC6B57 /* UserAccount.swift in Sources */,
 				91C7B3151D3004500054AD77 /* PopoverViewController.swift in Sources */,
 				91C7B3101D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift in Sources */,
 				910A694E1D2D5D630010ACD9 /* HomeViewController.swift in Sources */,
 				91991A1A1D2D3B0300D2E9FD /* AppDelegate.swift in Sources */,
 				9199155E1D2E9589002F1A13 /* ZNTabBar.swift in Sources */,
+				5C8033F61D309C3000BEA75F /* NetworkTools.swift in Sources */,
 				910A69501D2D5D6F0010ACD9 /* MessageViewController.swift in Sources */,
 				9199156A1D2EC44D002F1A13 /* BaseViewController.swift in Sources */,
 				9108DBD31D30104300110C85 /* PopoverAnimator.swift in Sources */,
