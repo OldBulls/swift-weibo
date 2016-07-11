@@ -13,9 +13,11 @@ class BaseViewController: UITableViewController {
     // MARK: - 懒加载属性
     lazy var visitorView : VisitorView = VisitorView.visitorView()
     
-    var isLogin : Bool = false
+    var isLogin : Bool = UserAccountViewModel.shareIntance.isLogin
     
     override func loadView() {
+        
+        // 判断加载哪个view
         isLogin ? super.loadView() : setupVisitorView()
     }
     

@@ -13,6 +13,12 @@ import QorumLogs //第三方打印log
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var defaultViewController :UIViewController? {
+        
+        let isLogin = UserAccountViewModel.shareIntance.isLogin
+    
+        return isLogin ? WelcomeViewController() : MainViewController()
+    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -27,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //创建window
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.rootViewController = MainViewController()
+        window?.rootViewController = defaultViewController
         window?.makeKeyAndVisible()
         
         return true

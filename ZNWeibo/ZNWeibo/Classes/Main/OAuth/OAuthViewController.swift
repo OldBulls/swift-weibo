@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class OAuthViewController: UIViewController {
     // MARK:- 控件的属性
@@ -77,18 +78,19 @@ extension OAuthViewController {
 // MARK:- webView的delegate方法
 extension OAuthViewController : UIWebViewDelegate {
     // webView开始加载网页
+    
     func webViewDidStartLoad(webView: UIWebView) {
-//        SVProgressHUD.show()
+        SVProgressHUD.show()
     }
     
     // webView网页加载完成
     func webViewDidFinishLoad(webView: UIWebView) {
-//        SVProgressHUD.dismiss()
+        SVProgressHUD.dismiss()
     }
     
     // webView加载网页失败
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
-//        SVProgressHUD.dismiss()
+        SVProgressHUD.dismiss()
     }
     
     
@@ -133,16 +135,60 @@ extension OAuthViewController {
             }
             
             //2.拿到结果
-            ZNLog(result)
             guard let accountDict = result else {
                 
                 ZNLog("没有获取授权后的结果")
                 return
             }
             
+            //3.字典转模型
             let account = UserAccount(dict: accountDict)
-            ZNLog(account)
+            ZNLog("转换成的模型数据 ：\(account)")
             
+            //4.请求用户信息
+            self.loadUserInfo(account)
+            
+        }
+    }
+    
+    private func loadUserInfo(account : UserAccount) {
+        guard let accessToken = account.access_token else {
+            return
+        }
+        guard let uid = account.uid else {
+            return
+        }
+        
+        NetworkTools.shareInstance.loadUsserInfo(accessToken, uid: uid) { (result, error) in
+            
+            //1.错误校验
+            if error != nil {
+                ZNLog(error)
+                return
+            }
+            
+            //2.拿到用户信息的结果
+            guard let userInfoDict = result else {
+                return
+            }
+            
+            //3.从字典中取出头像和昵称地址
+            account.screen_name = userInfoDict["screen_name"] as? String
+            account.avatar_large = userInfoDict["avatar_large"] as? String
+            
+            //4.将account对象保存
+            //获取沙盒路径
+            
+            //5.保存对象
+            NSKeyedArchiver.archiveRootObject(account, toFile: UserAccountViewModel.shareIntance.accountPath)
+            
+            //更新数据
+            UserAccountViewModel.shareIntance.account = account
+            
+            //6.显示欢迎界面
+            self.dismissViewControllerAnimated(false, completion: {
+                UIApplication.sharedApplication().keyWindow?.rootViewController = WelcomeViewController()
+            })
         }
     }
 }
