@@ -75,4 +75,19 @@ extension HomeViewController {
     }
 }
 
-
+extension HomeViewController {
+    private func loadStatuses() {
+        NetworkTools.shareInstance.loadStatuses { (result, error) in
+            if error != nil {
+                ZNLog(error)
+                return
+            }
+            
+            guard let resultArray = result else {
+                return
+            }
+            
+            
+        }
+    }
+}
