@@ -30,7 +30,7 @@ class WelcomeViewController: UIViewController {
         
         // Damping:阻力系数，系数越大，弹动的效果越不明显 0～1
         // initialSpringVelocity ：初始化速度
-        UIView.animateWithDuration(1.5, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 5.0, options: [], animations: {
+        UIView.animateWithDuration(1.5, delay: 0.0, usingSpringWithDamping: 0.77, initialSpringVelocity: 4.0, options: [], animations: {
             self.view.layoutIfNeeded()
             }) { (_) in
                 UIApplication.sharedApplication().keyWindow?.rootViewController = MainViewController()

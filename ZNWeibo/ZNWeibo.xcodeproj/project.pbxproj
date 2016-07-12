@@ -24,6 +24,9 @@
 		910A69501D2D5D6F0010ACD9 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A694F1D2D5D6F0010ACD9 /* MessageViewController.swift */; };
 		910A69521D2D5D770010ACD9 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A69511D2D5D770010ACD9 /* DiscoverViewController.swift */; };
 		910A69541D2D5D7E0010ACD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A69531D2D5D7E0010ACD9 /* ProfileViewController.swift */; };
+		91246C7E1D3517E400D956FC /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91246C7D1D3517E400D956FC /* NSDate-Extension.swift */; };
+		91246C801D351A7100D956FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91246C7F1D351A7100D956FC /* User.swift */; };
+		91246C821D3529D100D956FC /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91246C811D3529D100D956FC /* StatusViewModel.swift */; };
 		9199155E1D2E9589002F1A13 /* ZNTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9199155D1D2E9589002F1A13 /* ZNTabBar.swift */; };
 		919915671D2EC3D2002F1A13 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 919915661D2EC3D2002F1A13 /* MainVCSettings.json */; };
 		9199156A1D2EC44D002F1A13 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919915691D2EC44D002F1A13 /* BaseViewController.swift */; };
@@ -77,6 +80,9 @@
 		910A694F1D2D5D6F0010ACD9 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		910A69511D2D5D770010ACD9 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		910A69531D2D5D7E0010ACD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		91246C7D1D3517E400D956FC /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		91246C7F1D351A7100D956FC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		91246C811D3529D100D956FC /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		9199155D1D2E9589002F1A13 /* ZNTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZNTabBar.swift; sourceTree = "<group>"; };
 		919915661D2EC3D2002F1A13 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		919915691D2EC44D002F1A13 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				5C7A68BE1D34F194005A329F /* Status.swift */,
+				91246C7F1D351A7100D956FC /* User.swift */,
+				91246C811D3529D100D956FC /* StatusViewModel.swift */,
 			);
 			path = HomeModel;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 		9199156C1D2EC4A7002F1A13 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				91246C7D1D3517E400D956FC /* NSDate-Extension.swift */,
 				9199156D1D2EC4A7002F1A13 /* UIButton-Extension.swift */,
 				91C7B30F1D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift */,
 			);
@@ -521,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9108DBD11D3009A400110C85 /* ZNPresentationController.swift in Sources */,
+				91246C7E1D3517E400D956FC /* NSDate-Extension.swift in Sources */,
 				910A69541D2D5D7E0010ACD9 /* ProfileViewController.swift in Sources */,
 				9199156E1D2EC4A7002F1A13 /* UIButton-Extension.swift in Sources */,
 				5C8033FA1D30A1E200BEA75F /* OAuthViewController.swift in Sources */,
@@ -539,6 +549,8 @@
 				9199156A1D2EC44D002F1A13 /* BaseViewController.swift in Sources */,
 				9108DBD31D30104300110C85 /* PopoverAnimator.swift in Sources */,
 				910A69521D2D5D770010ACD9 /* DiscoverViewController.swift in Sources */,
+				91246C801D351A7100D956FC /* User.swift in Sources */,
+				91246C821D3529D100D956FC /* StatusViewModel.swift in Sources */,
 				910A694C1D2D5D210010ACD9 /* MainViewController.swift in Sources */,
 				91C7B3121D2FFF2B0054AD77 /* TitleButton.swift in Sources */,
 				919915721D2EC53E002F1A13 /* VisitorView.swift in Sources */,

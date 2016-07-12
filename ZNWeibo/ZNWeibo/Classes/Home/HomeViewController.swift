@@ -17,6 +17,10 @@ class HomeViewController: BaseViewController {
         self?.titleBtn.selected = presented
     }
 
+    // 微博模型数组
+    
+    private lazy var ViewModels : [StatusViewModel] = [StatusViewModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +33,9 @@ class HomeViewController: BaseViewController {
         
         // 设置导航栏的内容
         setupNavigationBar()
+        
+        // 请求首页数据
+        loadStatuses()
     }
 }
 
@@ -87,7 +94,35 @@ extension HomeViewController {
                 return
             }
             
+            for statusDict in resultArray {
+                
+                let status = Status(dict: statusDict)
+                let viewModel = StatusViewModel(status: status)
+                self.ViewModels.append(viewModel)
+            }
+            
+            self.tableView.reloadData()
             
         }
+    }
+}
+
+extension HomeViewController {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ViewModels.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let ID = "HomeCell"
+        var cell = tableView.dequeueReusableCellWithIdentifier(ID)
+        
+        if cell == nil {
+            cell = UITableViewCell(style: .Default, reuseIdentifier: ID)
+        }
+        
+        let viewModel = ViewModels[indexPath.row]
+        cell?.textLabel?.text = viewModel.status?.text
+        
+        return cell!
     }
 }
