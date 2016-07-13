@@ -11,6 +11,7 @@ import UIKit
 class StatusViewModel: NSObject {
 
     var status : Status?
+    var cellHeight : CGFloat = 0
     
     var sourceText : String?
     var createAtText : String?
@@ -64,13 +65,14 @@ class StatusViewModel: NSObject {
         }
         
         
-        // 5.处理图像url
+        // 5.处理配图url
         let profileURLString = status.user?.profile_image_url ?? ""
         profileURL = NSURL(string: profileURLString)
         
         
         //6.配图处理
-        if let picURLDicts = status.pic_urls {
+        let picURLDicts = status.pic_urls!.count != 0 ? status.pic_urls : status.retweeted_status?.pic_urls
+        if let picURLDicts = picURLDicts {
             for picURLDict in picURLDicts {
                 guard let picURLString = picURLDict["thumbnail_pic"] else {
                     continue

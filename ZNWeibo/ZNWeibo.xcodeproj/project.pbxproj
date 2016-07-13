@@ -43,6 +43,13 @@
 		91991A211D2D3B0300D2E9FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91991A201D2D3B0300D2E9FD /* Assets.xcassets */; };
 		91991A2F1D2D3B0300D2E9FD /* ZNWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91991A2E1D2D3B0300D2E9FD /* ZNWeiboTests.swift */; };
 		91991A3A1D2D3B0300D2E9FD /* ZNWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91991A391D2D3B0300D2E9FD /* ZNWeiboUITests.swift */; };
+		91A1BBD71D36991E00C2158E /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A1BBD51D36991E00C2158E /* ComposeViewController.swift */; };
+		91A1BBD81D36991E00C2158E /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A1BBD61D36991E00C2158E /* ComposeViewController.xib */; };
+		91A1BBDA1D369D8400C2158E /* ComposeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A1BBD91D369D8400C2158E /* ComposeTitleView.swift */; };
+		91A1BBDC1D36A05300C2158E /* ComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A1BBDB1D36A05300C2158E /* ComposeTextView.swift */; };
+		91A1BBE11D36B45B00C2158E /* PicPickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A1BBE01D36B45B00C2158E /* PicPickerCollectionView.swift */; };
+		91A1BBE41D36B48400C2158E /* PicPickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A1BBE21D36B48400C2158E /* PicPickerViewCell.swift */; };
+		91A1BBE51D36B48400C2158E /* PicPickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A1BBE31D36B48400C2158E /* PicPickerViewCell.xib */; };
 		91C7B3101D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7B30F1D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift */; };
 		91C7B3121D2FFF2B0054AD77 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7B3111D2FFF2B0054AD77 /* TitleButton.swift */; };
 		91C7B3151D3004500054AD77 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7B3141D3004500054AD77 /* PopoverViewController.swift */; };
@@ -110,6 +117,13 @@
 		91991A351D2D3B0300D2E9FD /* ZNWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZNWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91991A391D2D3B0300D2E9FD /* ZNWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZNWeiboUITests.swift; sourceTree = "<group>"; };
 		91991A3B1D2D3B0300D2E9FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91A1BBD51D36991E00C2158E /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		91A1BBD61D36991E00C2158E /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		91A1BBD91D369D8400C2158E /* ComposeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTitleView.swift; sourceTree = "<group>"; };
+		91A1BBDB1D36A05300C2158E /* ComposeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTextView.swift; sourceTree = "<group>"; };
+		91A1BBE01D36B45B00C2158E /* PicPickerCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPickerCollectionView.swift; sourceTree = "<group>"; };
+		91A1BBE21D36B48400C2158E /* PicPickerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPickerViewCell.swift; sourceTree = "<group>"; };
+		91A1BBE31D36B48400C2158E /* PicPickerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicPickerViewCell.xib; sourceTree = "<group>"; };
 		91C7B30F1D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		91C7B3111D2FFF2B0054AD77 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		91C7B3141D3004500054AD77 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +199,7 @@
 		910A69451D2D5BA90010ACD9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				91A1BBD41D3698FB00C2158E /* Compose */,
 				910A69481D2D5BA90010ACD9 /* Main */,
 				910A69471D2D5BA90010ACD9 /* Home */,
 				910A69491D2D5BA90010ACD9 /* Message */,
@@ -338,6 +353,28 @@
 			path = ZNWeiboUITests;
 			sourceTree = "<group>";
 		};
+		91A1BBD41D3698FB00C2158E /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				91A1BBDF1D36B45B00C2158E /* PicPickerCollectionView */,
+				91A1BBD51D36991E00C2158E /* ComposeViewController.swift */,
+				91A1BBD61D36991E00C2158E /* ComposeViewController.xib */,
+				91A1BBD91D369D8400C2158E /* ComposeTitleView.swift */,
+				91A1BBDB1D36A05300C2158E /* ComposeTextView.swift */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		91A1BBDF1D36B45B00C2158E /* PicPickerCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				91A1BBE01D36B45B00C2158E /* PicPickerCollectionView.swift */,
+				91A1BBE21D36B48400C2158E /* PicPickerViewCell.swift */,
+				91A1BBE31D36B48400C2158E /* PicPickerViewCell.xib */,
+			);
+			path = PicPickerCollectionView;
+			sourceTree = "<group>";
+		};
 		91C7B3131D3003F10054AD77 /* UIPopover */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,12 +505,14 @@
 				91991A211D2D3B0300D2E9FD /* Assets.xcassets in Resources */,
 				5C0BE9931D3637DD0017BAA8 /* PicCollectionViewCell.xib in Resources */,
 				5C87CEB71D333BE700D32A0C /* WelcomeViewController.xib in Resources */,
+				91A1BBD81D36991E00C2158E /* ComposeViewController.xib in Resources */,
 				919915741D2EC54F002F1A13 /* VisitorView.xib in Resources */,
 				91991A1F1D2D3B0300D2E9FD /* Main.storyboard in Resources */,
 				919915671D2EC3D2002F1A13 /* MainVCSettings.json in Resources */,
 				5C539BB31D35C7F400BF6B69 /* HomeViewCell.xib in Resources */,
 				5C8033FB1D30A1E200BEA75F /* OAuthViewController.xib in Resources */,
 				91C7B3171D30045C0054AD77 /* PopoverViewController.xib in Resources */,
+				91A1BBE51D36B48400C2158E /* PicPickerViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A1BBD71D36991E00C2158E /* ComposeViewController.swift in Sources */,
 				9108DBD11D3009A400110C85 /* ZNPresentationController.swift in Sources */,
 				910A69541D2D5D7E0010ACD9 /* ProfileViewController.swift in Sources */,
 				5C539BB51D35CE9F00BF6B69 /* NSDate-Extension.swift in Sources */,
@@ -566,9 +606,13 @@
 				5C7A68BF1D34F194005A329F /* Status.swift in Sources */,
 				9199156A1D2EC44D002F1A13 /* BaseViewController.swift in Sources */,
 				9108DBD31D30104300110C85 /* PopoverAnimator.swift in Sources */,
+				91A1BBDC1D36A05300C2158E /* ComposeTextView.swift in Sources */,
 				910A69521D2D5D770010ACD9 /* DiscoverViewController.swift in Sources */,
 				91246C801D351A7100D956FC /* User.swift in Sources */,
 				5C896D2F1D35D16D00A7DDF6 /* HomeViewCell.swift in Sources */,
+				91A1BBE41D36B48400C2158E /* PicPickerViewCell.swift in Sources */,
+				91A1BBE11D36B45B00C2158E /* PicPickerCollectionView.swift in Sources */,
+				91A1BBDA1D369D8400C2158E /* ComposeTitleView.swift in Sources */,
 				91246C821D3529D100D956FC /* StatusViewModel.swift in Sources */,
 				910A694C1D2D5D210010ACD9 /* MainViewController.swift in Sources */,
 				91C7B3121D2FFF2B0054AD77 /* TitleButton.swift in Sources */,

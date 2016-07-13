@@ -11,7 +11,7 @@ import UIKit
 class ZNTabBar: UITabBar {
 
     var previousClickedTabBarButton : UIControl?
-    private lazy var plusButton = UIButton(imageName: "tabbar_compose_icon_add", bgImageName: "tabbar_compose_button")
+    lazy var plusButton = UIButton(imageName: "tabbar_compose_icon_add", bgImageName: "tabbar_compose_button")
 
     
     override func layoutSubviews() {

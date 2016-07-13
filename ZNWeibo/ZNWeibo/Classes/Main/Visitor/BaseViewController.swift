@@ -24,6 +24,8 @@ class BaseViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
         setupNavigationItems()
     }
 }

@@ -101,8 +101,6 @@ extension MainViewController {
     }
     
     
-    
-    
     /** 通过类名创建添加子控制器 */
     private func addChildViewController(childVcName: String, title: String, imageName: String) {
         
@@ -147,6 +145,8 @@ extension MainViewController {
         //自定义tabBar
         let tabBar = ZNTabBar()
         setValue(tabBar, forKey: "tabBar")
+        tabBar.plusButton.addTarget(self, action: #selector(MainViewController.plusButtonDidClick), forControlEvents: .TouchUpInside)
+        
     }
     
 }
@@ -160,5 +160,14 @@ extension MainViewController {
         }
         
         ZNLog(#function)
+    }
+    
+    @objc private func plusButtonDidClick() {
+        
+        let composeVc = ComposeViewController()
+        let composeNav = UINavigationController(rootViewController: composeVc)
+        presentViewController(composeNav, animated: true, completion: nil)
+        
+     
     }
 }

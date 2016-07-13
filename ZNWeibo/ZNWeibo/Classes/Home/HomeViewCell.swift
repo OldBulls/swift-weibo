@@ -21,13 +21,18 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var bottomToolView: UIView!
     
     @IBOutlet weak var contentLabelWCons: NSLayoutConstraint!
-    
     @IBOutlet weak var picViewWCons: NSLayoutConstraint!
-    
     @IBOutlet weak var picViewHCons: NSLayoutConstraint!
     
+    @IBOutlet weak var picViewBottomCons: NSLayoutConstraint!
+    
+    @IBOutlet weak var retweetContentCons: NSLayoutConstraint!
+    @IBOutlet weak var retweetContentLabel: UILabel!
+    
+    @IBOutlet weak var bgView: UIView!
     
     @IBOutlet weak var picView: PicCollectionView!
     
@@ -40,17 +45,17 @@ class HomeViewCell: UITableViewCell {
             iconView.sd_setImageWithURL(viewModel.profileURL, placeholderImage: UIImage(named: "avatar_default_small"))
             
             verifiedView.image = viewModel.verifiedImage
-            
             sreenNameLabel.text = viewModel.status?.user?.screen_name
-            
             vipView.image = viewModel.vipImage
-            
             timeLabel.text = viewModel.createAtText
             
-            sourceLabel.text = viewModel.sourceText
+            if let sourceText = viewModel.sourceText {
+                sourceLabel.text = "来自 \(sourceText)"
+            } else {
+                sourceLabel.text = nil
+            }
             
             contentLabel.text = viewModel.status?.text
-            
             sreenNameLabel.textColor = viewModel.vipImage == nil ? UIColor.blackColor() : UIColor.orangeColor()
             
             // 获取图片大小
@@ -58,11 +63,36 @@ class HomeViewCell: UITableViewCell {
             picViewWCons.constant = picViewSize.width
             picViewHCons.constant = picViewSize.height
             
+            //正文配图数组
             picView.picURLs = viewModel.picURLs
+            
+            // 设置转发微博正文
+            if viewModel.status?.retweeted_status != nil {
+                
+                if let screenName = viewModel.status?.retweeted_status?.user?.screen_name, retwttwedText = viewModel.status?.retweeted_status?.text {
+                    retweetContentCons.constant = 15
+                    retweetContentLabel.text = "@" + "\(screenName): " + retwttwedText
+                    
+                    bgView.hidden = false
+                }
+                
+            } else {
+                retweetContentCons.constant = 0
+                retweetContentLabel.text = nil
+                bgView.hidden = true
+            }
+            
+            if viewModel.cellHeight == 0 {
+                
+                //强制布局
+                layoutIfNeeded()
+                
+                viewModel.cellHeight = CGRectGetMaxY(bottomToolView.frame)
+            }
+            
         }
     }
     
-
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -76,11 +106,13 @@ extension HomeViewCell {
     private func calculatePctViewSize(count : Int) -> CGSize {
         
         if count == 0 {
+            picViewBottomCons.constant = 0
             return CGSizeZero
         }
         
+        picViewBottomCons.constant = 10
         let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.minimumInteritemSpacing = 0
+//        layout.minimumInteritemSpacing = 0
         
         // 3.单张配图
         if count == 1 {
@@ -99,7 +131,7 @@ extension HomeViewCell {
         layout.itemSize = CGSize(width: imageViewWH, height: imageViewWH)
         
         if count == 4 {
-            let picViewWH = imageViewWH * 2 + itemMargin
+            let picViewWH = imageViewWH * 2 + itemMargin + 1
             return CGSize(width: picViewWH, height: picViewWH)
         }
         
