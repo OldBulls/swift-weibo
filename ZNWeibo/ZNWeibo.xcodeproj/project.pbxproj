@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1881645075E9E7B2E8B85D5E /* Pods_ZNWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7064564121860517A8BD7ED0 /* Pods_ZNWeibo.framework */; };
+		5C0BE98F1D361FB50017BAA8 /* PicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0BE98E1D361FB50017BAA8 /* PicCollectionView.swift */; };
+		5C0BE9911D36369E0017BAA8 /* PicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0BE9901D36369E0017BAA8 /* PicCollectionViewCell.swift */; };
+		5C0BE9931D3637DD0017BAA8 /* PicCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C0BE9921D3637DD0017BAA8 /* PicCollectionViewCell.xib */; };
 		5C46CF4F1D320FE300EDEBCB /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C46CF4E1D320FE300EDEBCB /* UserAccountViewModel.swift */; };
+		5C539BB31D35C7F400BF6B69 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C539BB11D35C7F400BF6B69 /* HomeViewCell.xib */; };
+		5C539BB51D35CE9F00BF6B69 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C539BB41D35CE9F00BF6B69 /* NSDate-Extension.swift */; };
 		5C753BC71D30A6EB00000384 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C753BC61D30A6EB00000384 /* Common.swift */; };
 		5C7A68BF1D34F194005A329F /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A68BE1D34F194005A329F /* Status.swift */; };
 		5C8033F61D309C3000BEA75F /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8033F51D309C3000BEA75F /* NetworkTools.swift */; };
@@ -16,6 +21,7 @@
 		5C8033FB1D30A1E200BEA75F /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8033F91D30A1E200BEA75F /* OAuthViewController.xib */; };
 		5C87CEB61D333BE700D32A0C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C87CEB41D333BE700D32A0C /* WelcomeViewController.swift */; };
 		5C87CEB71D333BE700D32A0C /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C87CEB51D333BE700D32A0C /* WelcomeViewController.xib */; };
+		5C896D2F1D35D16D00A7DDF6 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C896D2E1D35D16D00A7DDF6 /* HomeViewCell.swift */; };
 		5CD964FD1D30C6A300AC6B57 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD964FC1D30C6A300AC6B57 /* UserAccount.swift */; };
 		9108DBD11D3009A400110C85 /* ZNPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9108DBD01D3009A400110C85 /* ZNPresentationController.swift */; };
 		9108DBD31D30104300110C85 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9108DBD21D30104300110C85 /* PopoverAnimator.swift */; };
@@ -24,7 +30,6 @@
 		910A69501D2D5D6F0010ACD9 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A694F1D2D5D6F0010ACD9 /* MessageViewController.swift */; };
 		910A69521D2D5D770010ACD9 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A69511D2D5D770010ACD9 /* DiscoverViewController.swift */; };
 		910A69541D2D5D7E0010ACD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A69531D2D5D7E0010ACD9 /* ProfileViewController.swift */; };
-		91246C7E1D3517E400D956FC /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91246C7D1D3517E400D956FC /* NSDate-Extension.swift */; };
 		91246C801D351A7100D956FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91246C7F1D351A7100D956FC /* User.swift */; };
 		91246C821D3529D100D956FC /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91246C811D3529D100D956FC /* StatusViewModel.swift */; };
 		9199155E1D2E9589002F1A13 /* ZNTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9199155D1D2E9589002F1A13 /* ZNTabBar.swift */; };
@@ -63,7 +68,12 @@
 
 /* Begin PBXFileReference section */
 		4DF3664785323A256DE64B16 /* Pods-ZNWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZNWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZNWeibo/Pods-ZNWeibo.debug.xcconfig"; sourceTree = "<group>"; };
+		5C0BE98E1D361FB50017BAA8 /* PicCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicCollectionView.swift; sourceTree = "<group>"; };
+		5C0BE9901D36369E0017BAA8 /* PicCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C0BE9921D3637DD0017BAA8 /* PicCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicCollectionViewCell.xib; sourceTree = "<group>"; };
 		5C46CF4E1D320FE300EDEBCB /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
+		5C539BB11D35C7F400BF6B69 /* HomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		5C539BB41D35CE9F00BF6B69 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		5C753BC61D30A6EB00000384 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		5C7A68BE1D34F194005A329F /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		5C8033F51D309C3000BEA75F /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
@@ -71,6 +81,7 @@
 		5C8033F91D30A1E200BEA75F /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		5C87CEB41D333BE700D32A0C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5C87CEB51D333BE700D32A0C /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		5C896D2E1D35D16D00A7DDF6 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		5CD964FC1D30C6A300AC6B57 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		7064564121860517A8BD7ED0 /* Pods_ZNWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZNWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9108DBD01D3009A400110C85 /* ZNPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZNPresentationController.swift; sourceTree = "<group>"; };
@@ -80,7 +91,6 @@
 		910A694F1D2D5D6F0010ACD9 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		910A69511D2D5D770010ACD9 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		910A69531D2D5D7E0010ACD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		91246C7D1D3517E400D956FC /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		91246C7F1D351A7100D956FC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		91246C811D3529D100D956FC /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		9199155D1D2E9589002F1A13 /* ZNTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZNTabBar.swift; sourceTree = "<group>"; };
@@ -199,6 +209,11 @@
 				5C7A68BD1D34F10C005A329F /* HomeModel */,
 				91C7B3131D3003F10054AD77 /* UIPopover */,
 				910A694D1D2D5D630010ACD9 /* HomeViewController.swift */,
+				5C539BB11D35C7F400BF6B69 /* HomeViewCell.xib */,
+				5C896D2E1D35D16D00A7DDF6 /* HomeViewCell.swift */,
+				5C0BE98E1D361FB50017BAA8 /* PicCollectionView.swift */,
+				5C0BE9901D36369E0017BAA8 /* PicCollectionViewCell.swift */,
+				5C0BE9921D3637DD0017BAA8 /* PicCollectionViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -264,9 +279,9 @@
 		9199156C1D2EC4A7002F1A13 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				91246C7D1D3517E400D956FC /* NSDate-Extension.swift */,
 				9199156D1D2EC4A7002F1A13 /* UIButton-Extension.swift */,
 				91C7B30F1D2FFE7A0054AD77 /* UIBarButtonItem-Extension.swift */,
+				5C539BB41D35CE9F00BF6B69 /* NSDate-Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -451,10 +466,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				91991A211D2D3B0300D2E9FD /* Assets.xcassets in Resources */,
+				5C0BE9931D3637DD0017BAA8 /* PicCollectionViewCell.xib in Resources */,
 				5C87CEB71D333BE700D32A0C /* WelcomeViewController.xib in Resources */,
 				919915741D2EC54F002F1A13 /* VisitorView.xib in Resources */,
 				91991A1F1D2D3B0300D2E9FD /* Main.storyboard in Resources */,
 				919915671D2EC3D2002F1A13 /* MainVCSettings.json in Resources */,
+				5C539BB31D35C7F400BF6B69 /* HomeViewCell.xib in Resources */,
 				5C8033FB1D30A1E200BEA75F /* OAuthViewController.xib in Resources */,
 				91C7B3171D30045C0054AD77 /* PopoverViewController.xib in Resources */,
 			);
@@ -530,10 +547,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9108DBD11D3009A400110C85 /* ZNPresentationController.swift in Sources */,
-				91246C7E1D3517E400D956FC /* NSDate-Extension.swift in Sources */,
 				910A69541D2D5D7E0010ACD9 /* ProfileViewController.swift in Sources */,
+				5C539BB51D35CE9F00BF6B69 /* NSDate-Extension.swift in Sources */,
 				9199156E1D2EC4A7002F1A13 /* UIButton-Extension.swift in Sources */,
 				5C8033FA1D30A1E200BEA75F /* OAuthViewController.swift in Sources */,
+				5C0BE9911D36369E0017BAA8 /* PicCollectionViewCell.swift in Sources */,
 				5C753BC71D30A6EB00000384 /* Common.swift in Sources */,
 				5CD964FD1D30C6A300AC6B57 /* UserAccount.swift in Sources */,
 				5C87CEB61D333BE700D32A0C /* WelcomeViewController.swift in Sources */,
@@ -550,9 +568,11 @@
 				9108DBD31D30104300110C85 /* PopoverAnimator.swift in Sources */,
 				910A69521D2D5D770010ACD9 /* DiscoverViewController.swift in Sources */,
 				91246C801D351A7100D956FC /* User.swift in Sources */,
+				5C896D2F1D35D16D00A7DDF6 /* HomeViewCell.swift in Sources */,
 				91246C821D3529D100D956FC /* StatusViewModel.swift in Sources */,
 				910A694C1D2D5D210010ACD9 /* MainViewController.swift in Sources */,
 				91C7B3121D2FFF2B0054AD77 /* TitleButton.swift in Sources */,
+				5C0BE98F1D361FB50017BAA8 /* PicCollectionView.swift in Sources */,
 				919915721D2EC53E002F1A13 /* VisitorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

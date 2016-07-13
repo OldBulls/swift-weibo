@@ -19,6 +19,7 @@ class StatusViewModel: NSObject {
     var vipImage : UIImage?
     
     var profileURL : NSURL?
+    var picURLs : [NSURL] = [NSURL]()
     
     init(status : Status) {
         self.status = status
@@ -67,5 +68,15 @@ class StatusViewModel: NSObject {
         let profileURLString = status.user?.profile_image_url ?? ""
         profileURL = NSURL(string: profileURLString)
         
+        
+        //6.配图处理
+        if let picURLDicts = status.pic_urls {
+            for picURLDict in picURLDicts {
+                guard let picURLString = picURLDict["thumbnail_pic"] else {
+                    continue
+                }
+                picURLs.append(NSURL(string : picURLString)!)
+            }
+        }
     }
 }

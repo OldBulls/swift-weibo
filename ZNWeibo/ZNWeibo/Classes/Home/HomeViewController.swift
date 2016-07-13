@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: BaseViewController {
     
@@ -23,7 +24,6 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         //添加转盘动画
         visitorView.addRotationAnim()
@@ -36,6 +36,10 @@ class HomeViewController: BaseViewController {
         
         // 请求首页数据
         loadStatuses()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 200
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
 }
 
@@ -101,8 +105,31 @@ extension HomeViewController {
                 self.ViewModels.append(viewModel)
             }
             
-            self.tableView.reloadData()
+           self.cacheImages(self.ViewModels)
             
+        }
+    }
+    
+    // 下载图片
+    private func cacheImages(viewModels : [StatusViewModel]) {
+        // 0.创建group
+        let group = dispatch_group_create()
+        
+        // 1.缓存图片
+        for viewmodel in viewModels {
+            for picURL in viewmodel.picURLs {
+                dispatch_group_enter(group)
+                SDWebImageManager.sharedManager().downloadImageWithURL(picURL, options: [], progress: nil, completed: { (_, _, _, _, _) -> Void in
+                    ZNLog("下载了一张图片")
+                    dispatch_group_leave(group)
+                })
+            }
+        }
+        
+        // 2.刷新表格
+        dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
+            ZNLog("刷新表格")
+            self.tableView.reloadData()
         }
     }
 }
@@ -114,14 +141,14 @@ extension HomeViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let ID = "HomeCell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(ID)
+        var cell = tableView.dequeueReusableCellWithIdentifier(ID) as? HomeViewCell
         
         if cell == nil {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: ID)
+            cell = NSBundle.mainBundle().loadNibNamed("HomeViewCell", owner: nil, options: nil).first as? HomeViewCell
+            
         }
         
-        let viewModel = ViewModels[indexPath.row]
-        cell?.textLabel?.text = viewModel.status?.text
+        cell?.viewModel =  ViewModels[indexPath.row]
         
         return cell!
     }

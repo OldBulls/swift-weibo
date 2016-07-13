@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PicCell" id="zT4-bV-frH" customClass="PicCollectionViewCell" customModule="ZNWeibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="352"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="352"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PAf-gR-vcp">
+                        <rect key="frame" x="0.0" y="0.0" width="348" height="352"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="PAf-gR-vcp" firstAttribute="top" secondItem="zT4-bV-frH" secondAttribute="top" id="6oP-ZG-2fu"/>
+                <constraint firstItem="PAf-gR-vcp" firstAttribute="leading" secondItem="zT4-bV-frH" secondAttribute="leading" id="bYM-sy-spD"/>
+                <constraint firstAttribute="bottom" secondItem="PAf-gR-vcp" secondAttribute="bottom" id="clc-hA-jSG"/>
+                <constraint firstAttribute="trailing" secondItem="PAf-gR-vcp" secondAttribute="trailing" id="xWN-JB-DCZ"/>
+            </constraints>
+            <size key="customSize" width="348" height="352"/>
+            <connections>
+                <outlet property="picView" destination="PAf-gR-vcp" id="CsO-NS-hFz"/>
+            </connections>
+            <point key="canvasLocation" x="-42" y="223"/>
+        </collectionViewCell>
+    </objects>
+</document>
